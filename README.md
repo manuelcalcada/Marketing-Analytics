@@ -77,9 +77,6 @@ Os dois modelos de propensão desenvolvidos podem ser utilizados para identifica
 
 Da segmentação, chegamos nos seguintes perfis de clientes:
 
-Aqui está uma descrição dos clusters com base nas características fornecidas:
-
-
 #### **Cluster 0 - Experientes**
 
 - **Perfil**: Leads mais velhos.
