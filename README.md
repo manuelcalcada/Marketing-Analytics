@@ -43,6 +43,27 @@ Neste projeto, a metodologia CRISP DM (Cross-Industry Standard Process for Data 
 
 ### 2. Modelagem
 
+
+Com base no entendimento do problema e no comportamento que queremos modelar, foram levantadas as seguintes hipóteses:
+
+
+| Grupo                  | Hipótese                                                                                                                                          |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Demografia            | Clientes mais jovens (idade < 30) têm maior probabilidade de subscrever um depósito a prazo.                                                      |
+|                       | Clientes aposentados ou estudantes têm maior probabilidade de subscrever um depósito a prazo.                                                     |
+|                       | Clientes solteiros têm menor probabilidade de subscrever um depósito a prazo em comparação com clientes casados.                                  |
+| Socioeconômico        | Clientes sem crédito em default têm maior probabilidade de subscrever um depósito a prazo.                                                        |
+|                       | Clientes com formação superior e profissional têm maior probabilidade de subscrever um depósito a prazo.                                                        |
+|                       | Clientes que possuem empréstimo para habitação ou pessoal têm menor probabilidade de subscrever um depósito a prazo.                                         |
+| Comunicação           | Clientes que foram contactados via celular têm maior probabilidade de subscrever um depósito a prazo do que aqueles contactados via telefone.     |
+|                       | Contatos realizados durante meses específicos têm maior taxa de sucesso na subscrição de depósitos a prazo.                    |
+| Histórico de Campanha | Clientes que foram contactados mais de uma vez durante a campanha têm maior probabilidade de subscrever um depósito a prazo.                       |
+|                       | Clientes que tiveram sucesso em campanhas anteriores têm maior probabilidade de subscrever um depósito a prazo novamente.                          |
+|                       | Clientes que não foram contactados anteriormente têm menor probabilidade de subscrever um depósito a prazo.                           |
+| Indicadores Econômicos| Períodos com taxa de variação de emprego positiva têm maior taxa de subscrição de depósitos a prazo.                                              |
+|                       | Altos índices de confiança do consumidor estão associados a uma maior probabilidade de subscrição de depósitos a prazo.                            |
+|                       | Altas taxas Euribor de 3 meses estão negativamente correlacionadas com a subscrição de depósitos a prazo.                                          |
+
 Inicialmente, foi realizada uma Análise Exploratória de Dados (EDA) univariada e bivariada para explorar cada variável individualmente e identificar os principais insights que pudessem gerar quick-wins e a criação de variáveis derivadas. Essa etapa foi crucial para entender a distribuição dos dados e a relação entre as variáveis, permitindo a identificação de padrões e tendências importantes. Com os insights obtidos, foram criadas variáveis derivadas que capturam nuances adicionais do comportamento dos clientes, preparando a base para a modelagem preditiva.
 
 Na modelagem de propensão à conversão, diversos algoritmos foram testados, incluindo Logistic Regression, K-Nearest Neighbors, Decision Tree, Random Forest, XGBoost e Multi Layer Perceptron Neural Network. Para garantir a robustez do modelo, foram aplicadas técnicas de balanceamento de classes e redução de dimensionalidade. As métricas de avaliação priorizadas foram o F1-Score, ROC AUC, explicabilidade, precision, recall e acurácia. O XGBoost, com balanceamento via class weight e sem redução de dimensionalidade, se destacou como o modelo mais eficaz. Além disso, optou-se por separar a modelagem em dois submodelos: um para clientes já contactados em campanhas anteriores e outro para leads inéditos. 
@@ -61,11 +82,16 @@ A campanha alcançou uma **taxa de conversão de 11%**, convertendo aproximadame
 - **Estado Civil**: **60% dos leads são casados**, mas a melhor conversão foi observada entre os **solteiros**.
 - **Educação**: A campanha teve mais sucesso entre aqueles com **ensino superior**, enquanto os com **educação básica** apresentaram pior desempenho.
 
+![image](https://github.com/user-attachments/assets/c600e05b-0771-4d98-95bb-44997d0c8f86)
+
+
 #### Análise de Empréstimos e Inadimplência
 
 - **Empréstimo Pessoal**: A presença de empréstimos pessoais não demonstrou correlação significativa com a decisão de adquirir o depósito.
 - **Empréstimo Habitacional**: Leads com **empréstimos habitacionais** mostraram uma ligeira tendência a converter melhor, indicando estabilidade financeira.
 - **Inadimplência**: A maioria dos leads não está inadimplente, mas os dados ausentes sobre inadimplência têm uma taxa de conversão pior.
+
+![image](https://github.com/user-attachments/assets/6fa442bf-ab9b-4451-bccf-0fcabd7f4316)
 
 #### Métodos de Contato
 
@@ -73,9 +99,23 @@ A campanha alcançou uma **taxa de conversão de 11%**, convertendo aproximadame
 - **Contato em Campanhas Anteriores**: Apenas **14% dos leads foram contatados em campanhas anteriores**, com a maioria tendo recusado antes.
 - **Número e Frequência de Contatos**: A média foi de **2,5 contatos por lead**. A eficácia foi maior no **primeiro contato**, e o tempo entre campanhas foi em média de **6 dias**.
 
+![image](https://github.com/user-attachments/assets/608d7e43-25f4-44da-ad50-1302a1d8e6da)
+![image](https://github.com/user-attachments/assets/3a54a552-1ea1-458c-b728-3810bf180ade)
+
+
 Os dois modelos de propensão desenvolvidos podem ser utilizados para identificar os clientes (a nível individual) com maior propensão a conversão, enquanto que o modelo de segmentação identifica perfis e direciona ações específicas. 
 
+#### Modelo de clientes:
+
+![image](https://github.com/user-attachments/assets/0a89108b-ec5e-40e0-af04-dae3c6433132)
+
+#### Modelo de leads:
+![image](https://github.com/user-attachments/assets/52eb6b00-ceb0-4a94-8b0f-2d8e0addf6c4)
+
 Da segmentação, chegamos nos seguintes perfis de clientes:
+
+![image](https://github.com/user-attachments/assets/01b31dcb-ce37-4b20-b54d-8d9bacd37ebb)
+
 
 #### **Cluster 0 - Experientes**
 
