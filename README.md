@@ -83,6 +83,8 @@ A campanha alcançou uma **taxa de conversão de 11%**, convertendo aproximadame
 - **Educação**: A campanha teve mais sucesso entre aqueles com **ensino superior**, enquanto os com **educação básica** apresentaram pior desempenho.
 
 ![image](https://github.com/user-attachments/assets/c600e05b-0771-4d98-95bb-44997d0c8f86)
+![image](https://github.com/user-attachments/assets/20ee5de4-8630-4c4b-b57d-849959a03676)
+![image](https://github.com/user-attachments/assets/137d228b-5d31-4c4a-9f11-ca3023ccdf59)
 
 
 #### Análise de Empréstimos e Inadimplência
@@ -91,7 +93,9 @@ A campanha alcançou uma **taxa de conversão de 11%**, convertendo aproximadame
 - **Empréstimo Habitacional**: Leads com **empréstimos habitacionais** mostraram uma ligeira tendência a converter melhor, indicando estabilidade financeira.
 - **Inadimplência**: A maioria dos leads não está inadimplente, mas os dados ausentes sobre inadimplência têm uma taxa de conversão pior.
 
-![image](https://github.com/user-attachments/assets/6fa442bf-ab9b-4451-bccf-0fcabd7f4316)
+![image](https://github.com/user-attachments/assets/3e5fa952-fe91-43c7-a44f-678b922b2408)
+![image](https://github.com/user-attachments/assets/c75f330d-f918-4159-b3c3-4472931a93d8)
+
 
 #### Métodos de Contato
 
@@ -100,7 +104,10 @@ A campanha alcançou uma **taxa de conversão de 11%**, convertendo aproximadame
 - **Número e Frequência de Contatos**: A média foi de **2,5 contatos por lead**. A eficácia foi maior no **primeiro contato**, e o tempo entre campanhas foi em média de **6 dias**.
 
 ![image](https://github.com/user-attachments/assets/608d7e43-25f4-44da-ad50-1302a1d8e6da)
-![image](https://github.com/user-attachments/assets/3a54a552-1ea1-458c-b728-3810bf180ade)
+![image](https://github.com/user-attachments/assets/f1277913-3564-4407-8538-6d0889d4445b)
+![image](https://github.com/user-attachments/assets/1db0095d-4667-4898-9c6c-95a01d0ca0fe)
+
+
 
 
 Os dois modelos de propensão desenvolvidos podem ser utilizados para identificar os clientes (a nível individual) com maior propensão a conversão, enquanto que o modelo de segmentação identifica perfis e direciona ações específicas. 
